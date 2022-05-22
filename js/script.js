@@ -3,9 +3,17 @@
  */
 (function ($) {
     "use strict";
-      $('.sakura-falling').sakura();
-})(jQuery);
+      $('.sakura-falling').sakura(
+        'start', {
+                        // Horizontal movement animation names
+            fallSpeed: 1,        // Factor for petal fall speed
+            maxSize: 14,         // Maximum petal size
+            minSize: 9,          // Minimum petal size
+            newOn: 300,          // Interval after which a new petal is added
 
+            }
+      );
+})(jQuery);
 /**
  *
  * Despite so many new Bollywood and English song options, I prefered to use two-decade-old song, Din Shagna Da!
