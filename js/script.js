@@ -6,10 +6,10 @@
       $('.sakura-falling').sakura(
         'start', {
                         // Horizontal movement animation names
-            fallSpeed: 1,        // Factor for petal fall speed
+            fallSpeed: 3,        // Factor for petal fall speed
             maxSize: 14,         // Maximum petal size
             minSize: 9,          // Minimum petal size
-            newOn: 300,          // Interval after which a new petal is added
+            newOn: 200,          // Interval after which a new petal is added
 
             }
       );
