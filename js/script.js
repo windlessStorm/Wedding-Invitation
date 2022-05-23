@@ -7,9 +7,9 @@
         'start', {
                         // Horizontal movement animation names
             fallSpeed: 1,        // Factor for petal fall speed
-            maxSize: 24,         // Maximum petal size
+            maxSize: 16,         // Maximum petal size
             minSize: 9,          // Minimum petal size
-            newOn: 100,          // Interval after which a new petal is added
+            newOn: 1300,          // Interval after which a new petal is added
 
             }
       );
