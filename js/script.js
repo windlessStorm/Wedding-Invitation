@@ -14,6 +14,13 @@
             }
       );
 })(jQuery);
+
+$("#welcome").click(function() {
+  $("#splash-overlay").addClass('splash_active');
+  $("#welcome").removeClass('welcome-tap')
+  $("#welcome").addClass('welcome-after-click');
+});
+
 /**
  *
  * Despite so many new Bollywood and English song options, I prefered to use two-decade-old song, Din Shagna Da!
@@ -28,10 +35,25 @@
  * Listen here: https://youtu.be/X0MDALpV29s
  *
  */
-$(document).on('click', function(){
-    document.getElementById("my_audio").play();
-    console.log('Shaadi me zaroor aana');
-});
+// $(document).on('click', function(){
+//     var promise =document.getElementById("my_audio").play();
+//     console.log('Shaadi me zaroor aana');
+// });
+
+window.onload=function(){
+    var promise = document.getElementById("my_audio").play();
+    if (promise !== undefined) {
+        promise.then(_ => {
+          // Autoplay started!
+        }).catch(error => {
+            console.log("autoplay was not successfull, ", error)
+            $(document).on('click', function(){
+                var promise = document.getElementById("my_audio").play();
+                console.log('Shaadi me zaroor aana');
+            });
+        });
+      }
+}
 
 // Set the date we're counting down to
 var countDownDate = new Date("July 05, 2022 10:30:00").getTime();
